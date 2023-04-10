@@ -29,7 +29,8 @@ const TemplateSettings = (props) => {
   };
 
   const previewTemplate = (id) => {
-    const url = `${process.env.REACT_APP_PUBLIC_URL}/#/preview/${id}`;
+    // const url = `${process.env.REACT_APP_PUBLIC_URL}/#/preview/${id}`;
+    const url = `https://starlit-truffle-0e5b00.netlify.app/#/preview/${id}`;
     console.log(url);
     window.open(url, "_blank");
   };
