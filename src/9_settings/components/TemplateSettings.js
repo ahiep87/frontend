@@ -29,9 +29,7 @@ const TemplateSettings = (props) => {
   };
 
   const previewTemplate = (id) => {
-    // const url = `${process.env.REACT_APP_PUBLIC_URL}/#/preview/${id}`;
-    const url = `https://starlit-truffle-0e5b00.netlify.app/#/preview/${id}`;
-    console.log(url);
+    const url = `${process.env.REACT_APP_PUBLIC_URL}/#/preview/${id}`;
     window.open(url, "_blank");
   };
 
@@ -67,13 +65,13 @@ const TemplateSettings = (props) => {
           return res.templates;
         });
       }
-    } catch (error) {}
+    } catch (error) { }
   }, [sendRequest, token]);
 
   useEffect(() => {
     fetchTemplates();
   }, [fetchTemplates]);
-  
+
   return (
     <Fragment>
       <Alert message={alert.message} isDisplayed={alert.showAlert} className={alert.className} />
