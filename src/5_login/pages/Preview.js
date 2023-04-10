@@ -11,8 +11,7 @@ const Preview = (props) => {
   const [templateUrl, setTemplateUrl] = useState("");
 
   const fetchTemplates = useCallback(async () => {
-    // const url = process.env.REACT_APP_BACKEND_URL +`/settings/login-template/preview-template/${templateId}`;
-    const url = `https://starlit-truffle-0e5b00.netlify.app/settings/login-template/preview-template/${templateId}`;
+    const url = process.env.REACT_APP_BACKEND_URL + `/settings/login-template/preview-template/${templateId}`;
     try {
       const res = await sendRequest(url, "GET", { "Content-Type": "application/json", Authorization: "Bearer " + token }, null, true, "Preview template failed", null, COMMON_VALUES.alertClass.danger);
 
@@ -28,7 +27,7 @@ const Preview = (props) => {
 
   return (
     <Fragment>
-      <div style={{ backgroundImage: `linear-gradient(to right, #4f4e4e, #535e5c, #eeb3b3), url(${templateUrl})`}} className="background"></div>
+      <div style={{ backgroundImage: `linear-gradient(to right, #4f4e4e, #535e5c, #eeb3b3), url(${templateUrl})` }} className="background"></div>
       <main className="authentication">
         <div className="main__login">
           <h1 className="login__title">ADMIN LOGIN</h1>
