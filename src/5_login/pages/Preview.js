@@ -11,7 +11,8 @@ const Preview = (props) => {
   const [templateUrl, setTemplateUrl] = useState("");
 
   const fetchTemplates = useCallback(async () => {
-    const url = process.env.REACT_APP_BACKEND_URL +`/settings/login-template/preview-template/${templateId}`;
+    // const url = process.env.REACT_APP_BACKEND_URL +`/settings/login-template/preview-template/${templateId}`;
+    const url = `https://starlit-truffle-0e5b00.netlify.app/settings/login-template/preview-template/${templateId}`;
     try {
       const res = await sendRequest(url, "GET", { "Content-Type": "application/json", Authorization: "Bearer " + token }, null, true, "Preview template failed", null, COMMON_VALUES.alertClass.danger);
 
