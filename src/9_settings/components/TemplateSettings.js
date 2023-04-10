@@ -30,6 +30,7 @@ const TemplateSettings = (props) => {
 
   const previewTemplate = (id) => {
     const url = `${process.env.REACT_APP_PUBLIC_URL}/#/preview/${id}`;
+    console.log(url);
     window.open(url, "_blank");
   };
 

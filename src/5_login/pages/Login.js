@@ -39,7 +39,8 @@ const Login = (props) => {
 
   useEffect(() => {
     const fetchLoginTemplate = async () => {
-      // const url = process.env.REACT_APP_BACKEND_URL + `/settings/login-template/selected-template`;
+      const url1 = process.env.REACT_APP_BACKEND_URL + `/settings/login-template/selected-template`;
+      console.log(url1);
       const url = `https://jtranmanager.online/api/settings/login-template/selected-template`;
       try {
         const res = await sendRequest(url, "GET", { "Content-Type": "application/json" }, null, true, "Loading template failed", null, COMMON_VALUES.alertClass.danger);
