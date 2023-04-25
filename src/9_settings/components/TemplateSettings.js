@@ -72,6 +72,7 @@ const TemplateSettings = (props) => {
     fetchTemplates();
   }, [fetchTemplates]);
 
+  // random comment
   return (
     <Fragment>
       <Alert message={alert.message} isDisplayed={alert.showAlert} className={alert.className} />
